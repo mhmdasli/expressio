@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Block Chain</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='./css/framework.extras.css'/>
+    <link rel='stylesheet' href='./css/theme.css'/>
+</head>
+<body>
+<div class="container m-t-lg">
+    <input type="text" class="form-control" name="name"
+           data-track-input
+           data-request-url="/"
+           data-request="onClickMe"
+           data-request-data="id: 7"
+           data-request-confirm="confirm before sending"
+           data-request-redirect=""
+           data-request-error=""
+           data-request-complete=""
+           data-request-loading="loading"
+           data-request-update="'mypartial': '#response'"
+           data-request-before-update="beforeUpdate(data)"
+           data-request-success="onSuccess(data)"
+    >
+    <div class="callout-info" id="response"></div>
+</div>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="./js/app.js" type="text/javascript"></script>
+<script src="./js/framework.js" type="text/javascript"></script>
+<script src="./js/framework.extras.js" type="text/javascript"></script>
+
+</html>

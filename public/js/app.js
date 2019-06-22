@@ -3,9 +3,11 @@
  */
 
 function onSuccess (data) {
-    $('#response').html(data);
+    alert('success')
 }
-
+function beforeUpdate(){
+    alert('before update')
+}
 jQuery(document).ready(function($){
     
 

@@ -292,6 +292,8 @@ if (window.jQuery.request !== undefined) {
                         }
                         else {
                             $(selector).trigger('ajaxBeforeReplace')
+                            console.log(data['mypartial']);
+                            $('#response').html(data['mypartial']);
                             $(selector).html(data[partial]).trigger('ajaxUpdate', [context, data, textStatus, jqXHR])
                         }
                     }
