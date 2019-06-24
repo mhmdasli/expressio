@@ -2,6 +2,7 @@
 
 express.js with socket.io and frontend app for rapid start.
 frontend and backend connected with the x-handler on the client and server
+by default the x-handler contains simple [chat app](https://expressio-chat.herokuapp.com/) 
 ## x-handler client
 use this data attributes inside any of the following tags:
 form,button,a, and any form input tag
