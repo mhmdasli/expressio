@@ -2,13 +2,16 @@
  * Application
  */
 
-function onSuccess (data) {
+
+function onSuccess(data) {
     alert('success')
 }
-function beforeUpdate(){
+
+function beforeUpdate() {
     alert('before update')
 }
-jQuery(document).ready(function($){
-    
+
+jQuery(document).ready(function ($) {
+
 
 });
