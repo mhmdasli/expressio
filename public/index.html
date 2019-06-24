@@ -5,7 +5,12 @@
     <link href="./dist/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link rel='stylesheet' href='./css/theme.css'/>
 </head>
-<body>
+<body class="bg-secondary">
+<header class="p-y-md bg-dark text-light">
+    <div class="container">
+        <a href="https://github.com/mhmdasli/expressio" target="_blank" class="text-light float-right">See In Github</a>
+    </div>
+</header>
 <div class="container" id="app">
     <div class="row" >
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto" >
@@ -26,7 +31,9 @@
         </div>
     </div>
 </div>
-
+<footer class="text-center fixed-bottom p-y-sm bg-dark text-light">
+    By: Mohamad Ali
+</footer>
 </body>
 <script src="./dist/socket/socket.io.js"></script>
 <script src="./dist/jquery/jquery.min.js"></script>

@@ -28,7 +28,6 @@ db.js on the app root using mysql by default, could be changed and used any wher
 the connection details must be added to the .env file 
 ## env
 ```
-BLOCKCHAIN_API=
 DB_HOST=
 DB_USER= 
 DB_PASSWORD=
