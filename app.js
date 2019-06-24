@@ -19,16 +19,15 @@ app.use('/', indexRoute);
 
 var socketData = require('./x-handler/socket');
 io.on('connection', function (socket) {
-    io.sockets.emit('userCount', {userCount: socketData.userCount,users: socketData.users});
+    io.sockets.emit('usersUpdate', {userCount: socketData.userCount, users: socketData.users});
     socket.on('chat message', function (msg) {
         io.emit('chat message', msg);
     });
     socket.on('disconnect', function () {
         socketData.onDisconnect();
-        io.sockets.emit('userCount', {users: socketData.users});
+        io.sockets.emit('usersUpdate', {userCount: socketData.userCount, users: socketData.users});
     });
-})
-;
+});
 http.listen(port, function () {
     console.log('listening on *:' + port);
 });

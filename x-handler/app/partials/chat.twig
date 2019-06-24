@@ -1,0 +1,32 @@
+<div class="card h-100">
+    <ul id="messages" class="h-100"></ul>
+
+    <form action="" id="chat-message">
+        <input name="message" type="text" class="form-control" autocomplete="off"/>
+        <input name="username" type="text" value="{{ user.name }}" hidden>
+        <button class="btn btn-block btn-dark">Send</button>
+    </form>
+</div>
+
+<script>
+    $(function () {
+        var socket = io();
+
+        socket.on('usersUpdate', function (data) {
+            $('#online-users').text(data.userCount);
+            $('#users li').remove();
+            $.each(data.users, function (i, item) {
+                $('#users').append('<li>user: "' + item + '"</li>');
+            })
+        });
+
+        $('#chat-message').submit(function (e) {
+            socket.emit('chat message', $(this).serializeArray());
+            $('#chat-message')[0].reset();
+            return false;
+        });
+        socket.on('chat message', function (msg) {
+            $('#messages').append($('<li>').text(msg[1].value + ': ' + msg[0].value));
+        });
+    });
+</script>
